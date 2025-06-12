@@ -30,11 +30,11 @@
      - name: Copy file
        copy: src=target/LoginWebApp.war dest=/usr/share/tomcat/webapps/LoginWebApp.war
 
-     - name: Allow all access to tcp port 8080
-       ufw:
-         rule: allow
-         port: '8080'
-         proto: tcp
+    # - name: Allow all access to tcp port 8080
+     #  ufw:
+     #    rule: allow
+     #    port: '8080'
+     #    proto: tcp
 
      - name: Start Tomcat
        command: /usr/share/tomcat/bin/startup.sh
